@@ -26,5 +26,11 @@ export class TasksController {
   findManyById(@Body() task_ids: string[]): Promise<Task[]> {
     return this.taskService.findMany(task_ids);
   }
+
+  @Get(':id')
+  @ApiCreatedResponse({ description: 'Get tasks by id' })
+  findOne(@Param() id: string): Promise<Task> {
+    return this.taskService.findOne(id);
+  }
   
 }
