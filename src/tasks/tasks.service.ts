@@ -4,7 +4,7 @@ import { Model } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
 import * as mongoose from 'mongoose';
 import { TaskDto } from './dto/task.dto'
-import {Campaign} from '../campaigns/interfaces/campaign.interface';
+import { Campaign } from '../campaigns/interfaces/campaign.interface';
 
 @Injectable()
 export class TaskService {
@@ -14,7 +14,11 @@ export class TaskService {
 
   async create(taskDto: TaskDto): Promise<Task> {
     const createdTask = new this.taskModel(taskDto);
-    return createdTask.save();
+    console.log('createdTask:', createdTask)
+    let savedTask = createdTask.save();
+    console.log('savedTask:', savedTask)
+
+    return savedTask
   }
 
   async findMany(idsArray: string[]): Promise<Task[]> {
@@ -24,7 +28,19 @@ export class TaskService {
   }
 
   async findOne(id): Promise<Task> {
-    return this.taskModel.findOne( {_id: id.id} );
+    return this.taskModel.findOne({ _id: id.id });
+  }
+
+  async update(id: string, updates: any): Promise<Task> {
+    const res = await this.taskModel.findByIdAndUpdate(id, updates, { new: true });
+    return res
+  }
+
+  async addResponse(task_id: string, response: object): Promise<Task> {
+    const updates = {
+      $push: { responses: response }
+    };
+    return this.update(task_id, updates);
   }
 
 }

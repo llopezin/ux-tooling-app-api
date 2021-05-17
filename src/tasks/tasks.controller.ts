@@ -32,5 +32,22 @@ export class TasksController {
   findOne(@Param() id: string): Promise<Task> {
     return this.taskService.findOne(id);
   }
+
+  @Post(':id/response')
+  @ApiCreatedResponse({ description: 'Post a response' })
+  addResponse(@Body() response: object, @Param('id') task_id: string): Promise<Task> {
+    return this.taskService.addResponse(task_id, response);
+  }
+
+  @UseGuards(JwtAuthGuard)
+  @Put('/update/:id')
+  @ApiCreatedResponse({ description: 'Modify task' })
+  @ApiBody({ type: TaskDto })
+  update(
+    @Body() updateTaskDto: TaskDto,
+    @Param('id') id
+  ): Promise<Campaign> {
+    return this.taskService.update(id, updateTaskDto);
+  }
   
 }
