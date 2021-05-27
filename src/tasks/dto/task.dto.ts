@@ -10,14 +10,23 @@ export class TaskDto {
   @ApiProperty({ type: Array, description: 'questions' })
   readonly questions?: String[];
 
-  @ApiProperty({ type: Array, description: 'responses' })
+  @ApiProperty({ type: Array, description: 'cards' })
   readonly cards?: String[];
 
-  @ApiProperty({ type: Array, description: 'questions' })
+  @ApiProperty({ type: Array, description: 'instructions' })
+  readonly instructions?: String;
+
+  @ApiProperty({ type: Array, description: 'categories' })
   readonly categories?: String[];
 
   @ApiProperty({ type: Array, description: 'responses' })
   readonly responses: object[];
+
+  @ApiProperty({ type: Array, description: 'categories' })
+  readonly tasks?: [];
+
+  @ApiProperty({ type: Array, description: 'responses' })
+  readonly headings?: {};
   
   @ApiProperty({ type: Number, description: 'users required' })
   readonly usersRequired: number;

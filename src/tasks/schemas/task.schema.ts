@@ -6,6 +6,9 @@ export const taskSchema = new mongoose.Schema({
   questions: Array,
   categories: Array,
   cards: Array,
+  instructions: String,
   responses: Array,
+  tasks: Array,
+  headings: Map,
   usersRequired: Number
 });

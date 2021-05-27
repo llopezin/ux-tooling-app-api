@@ -6,7 +6,10 @@ export interface Task extends Document {
   type: string;
   questions?: string[];
   categories?: string[];
+  instructions?: string;
   cards?: string[];
+  tasks?: [],
+  headings?: {},
   responses: [];
   usersRequired: number;
 }

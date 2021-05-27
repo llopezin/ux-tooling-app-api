@@ -13,12 +13,11 @@ export class TaskService {
   ) { }
 
   async create(taskDto: TaskDto): Promise<Task> {
+    console.log('taskDto:', taskDto)
     const createdTask = new this.taskModel(taskDto);
     console.log('createdTask:', createdTask)
-    let savedTask = createdTask.save();
-    console.log('savedTask:', savedTask)
+    return createdTask.save();
 
-    return savedTask
   }
 
   async findMany(idsArray: string[]): Promise<Task[]> {
@@ -32,8 +31,7 @@ export class TaskService {
   }
 
   async update(id: string, updates: any): Promise<Task> {
-    const res = await this.taskModel.findByIdAndUpdate(id, updates, { new: true });
-    return res
+    return await this.taskModel.findByIdAndUpdate(id, updates, { new: true }); 
   }
 
   async addResponse(task_id: string, response: object): Promise<Task> {
