@@ -7,7 +7,7 @@
 
 
 # Sensitive or high-churn files:
-src/auth/constants.ts
+
 
 ## File-based project format:
 *.iws
