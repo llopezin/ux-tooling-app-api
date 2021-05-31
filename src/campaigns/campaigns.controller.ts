@@ -67,7 +67,6 @@ export class CampaignsController {
     @Param('id') campaign_id,
     @Body() task: Task
     ): Promise<Campaign> {
-    console.log('campaign_id:', campaign_id)
     return this.camapaignsService.addTask(task, campaign_id);
   }
 }

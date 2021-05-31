@@ -7,7 +7,9 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
+    "build:prod": "cd ../ux-tooling-app && ng build --prod --output-path ../ux-tooling-app-api-main/dist/bucle-app && cd ../ux-tooling-app-api-main && nest build",
     "nest": "nest",
+    "heroku": "heroku",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",
@@ -27,6 +29,7 @@
     "@nestjs/mongoose": "^7.2.4",
     "@nestjs/passport": "^7.1.5",
     "@nestjs/platform-express": "^7.6.13",
+    "@nestjs/serve-static": "^2.1.4",
     "@nestjs/swagger": "^4.7.16",
     "helmet": "^4.4.1",
     "mongoose": "^5.11.20",

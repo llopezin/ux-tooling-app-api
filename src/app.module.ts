@@ -9,6 +9,8 @@ import { PassportModule } from '@nestjs/passport';
 import { WorkSpacesModule } from './workspaces/works-paces.module';
 import { InvitedUsersModule } from './invited-users/invited-users.module';
 import { TasksModule } from './tasks/tasks.module';
+import { ServeStaticModule } from '@nestjs/serve-static';
+import { join } from 'path';
 
 @Module({
   imports: [
@@ -19,7 +21,10 @@ import { TasksModule } from './tasks/tasks.module';
     PassportModule,
     WorkSpacesModule,
     InvitedUsersModule,
-    TasksModule
+    TasksModule,
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, './', 'bucle-app'),
+    }),
   ],
   controllers: [AppController],
   providers: [],

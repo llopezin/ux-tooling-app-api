@@ -1,0 +1,1 @@
+{"version":3,"file":"camapaign.schema.js","sourceRoot":"","sources":["../../../src/campaigns/schemas/camapaign.schema.ts"],"names":[],"mappings":";;;AAAA,qCAAqC;AAExB,QAAA,cAAc,GAAG,IAAI,QAAQ,CAAC,MAAM,CAAC;IAChD,IAAI,EAAE,MAAM;IACZ,MAAM,EAAE,OAAO;IACf,aAAa,EAAE,KAAK;IACpB,SAAS,EAAE,MAAM;CAClB,CAAC,CAAC"}

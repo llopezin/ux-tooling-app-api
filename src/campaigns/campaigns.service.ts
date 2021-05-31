@@ -39,7 +39,6 @@ export class CampaignsService {
 
   async update(id: string, updates: any): Promise<Campaign> {
     const res = await this.campaignModel.findByIdAndUpdate(id, updates, { new: true });
-    console.log('res:', res)
     
     return res
   }
