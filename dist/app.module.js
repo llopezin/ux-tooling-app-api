@@ -34,7 +34,7 @@ AppModule = __decorate([
             invited_users_module_1.InvitedUsersModule,
             tasks_module_1.TasksModule,
             serve_static_1.ServeStaticModule.forRoot({
-                rootPath: path_1.join(__dirname, './', 'front'),
+                rootPath: path_1.join(__dirname, './', 'bucle-app'),
             }),
         ],
         controllers: [app_controller_1.AppController],
