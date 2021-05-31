@@ -4,6 +4,9 @@
   "version": "1.0.0",
   "description": "ux-tooling-app API",
   "license": "MIT",
+  "engines": {
+    "node": "14.16.0"
+  },
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
