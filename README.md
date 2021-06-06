@@ -1,83 +1,87 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
-</p>
+# Bucle.app API
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-  
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+_Una aplicación que conecta Bucle.app con su base de datos. Bucle.app lleva a cabo distintas tareas para la investigación UX, incluyendo Tree tests, card sorting y encuestas._
 
-## Description
+## Comenzando 🚀
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
-## Installation
+Mira **Deployment** para conocer como desplegar el proyecto.
 
-```bash
-$ npm install
+
+### Pre-requisitos 📋
+
+_Para instalar este sorfware necesitarás completar las siguiente instalaciones previas_
+
+```
+Instalación de node.js en tu máquina local
+
+https://nodejs.org/en/
 ```
 
-## Running the app
+### Instalación 🔧
 
-```bash
-# development
-$ npm run start
+_Para levantar un entorno de desarrollo entorno de desarrollo ejecutandose_
 
-# watch mode
-$ npm run start:dev
+_Instala el priyecto con el siguieente comando_
 
-# production mode
-$ npm run start:prod
+```
+npm i
 ```
 
-## API Documantation
+_Una vez instalado, levanta un servidor de desarrollo con el siguiente comando_
 
-```bash
-To view API documentation run the application and navigate to:
-http://localhost:3000/api/
-
-Created with Swagger:
-https://swagger.io/
+```
+npm run start:dev
 ```
 
-## Test
+_El proyecto se mostrará en tu `http://localhost:3000/`_
 
-```bash
-# unit tests
-$ npm run test
 
-# e2e tests
-$ npm run test:e2e
+## Frontend
 
-# test coverage
-$ npm run test:cov
+_Puedes instalar y ejecutar el frontend del proyecto en tu máquina local
+clonando este repositorio: `https://github.com/llopezin/ux-tooling-app`_
+
+_Para ejecutar la aplicación frontent con la API ejecutandose en tu máquina local
+consulta la documentación de la aplicación frontend, en concreto el apartado 
+backend_
+
+## Ejecutando las pruebas ⚙️
+
+_Para ejecutar las pruebas del proyecto emplear el comando_
+
+```
+npm run test
 ```
 
-## Support
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+## Despliegue 📦
 
-## Stay in touch
+_Para conseguir el código de producción para el despliege utilizar el siguiente comando_
+_El código se genrerará dentro del archivo ./dist_
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+```
+npm run build 
+```
 
-## License
+## API Documantacion
 
-  Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+Para ver más información sobre los endpoints de la aplicación visita:
+`https://bucle-app.herokuapp.com/api`
+
+
+
+## Construido con 🛠️
+
+* [NestJS](https://nestjs.com/) - El framework usado
+* [Swagger](https://swagger.io/) - Libreria empleada para la documentación
+
+
+## Repositorio
+
+https://github.com/llopezin/ux-tooling-app-api
+
+## Autora ✒️
+
+* **Laura López Infantes** - *Desarrollo completo* - (http://laurainfantes.netlify.app/)
